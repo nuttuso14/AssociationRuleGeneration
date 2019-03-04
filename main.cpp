@@ -125,9 +125,19 @@ void removeElement(vector<string> &arr, map<string,int> map1){
   
 int main(int argc, char *argv[]) {
 
-    cout << "data mining hw1" << endl;
+    cout << "Create Association Rule" << endl;
+
+
+    if(argc<4){
+        cerr << "Usage: " << argv[0] << " <INPUT_FILE> " <<" <MIN_SUPPORT>" <<" <MIN_CONF>"  << endl;
+		return 1;
+    }
+
     string line;
-    ifstream myfile ("input200.txt");
+    string input_f = argv[1];
+    min_support = stoi(argv[2]);
+    min_conf = stoi(argv[3]);
+    ifstream myfile (input_f);
     vector<string> lineitems;
    
     if (myfile.is_open())
@@ -161,18 +171,27 @@ int main(int argc, char *argv[]) {
         
         for(string l2:l1)
         {
-            if(find(listitem.begin(),listitem.end(),l2)!=listitem.end()) // found
+            if(l2!="\r")
             {
-               mapitem[l2]+=1;
+                if(find(listitem.begin(),listitem.end(),l2)!=listitem.end()) // found
+                {
+                    mapitem[l2]+=1;
+                }
+                else{
+                    listitem.push_back(l2); // not found
+                    mapitem.insert(make_pair(l2,1));
+                }
+               n_total++;   
             }
-            else{
-                listitem.push_back(l2); // not found
-                mapitem.insert(make_pair(l2,1));
-            }
-            n_total++;
-        }
+        }       
     }
     maps.push_back(mapitem);
+
+    /*for(string s1:listitem){
+            cout << s1 <<","<< mapitem[s1] << endl;
+            //n_total+=mapitem[s1];
+    }*/
+
      cout << "total items=" << n_total <<endl;
 
     //double min_support = 2;
@@ -312,7 +331,8 @@ int main(int argc, char *argv[]) {
     cout << "Print Output Process"<< endl;
     ofstream outfile;
    // outfile.open("output.txt",ios_base::app); //append
-    outfile.open("output.txt"); // overwrite
+    string output = "Result_"+input_f;
+    outfile.open(output); // overwrite
     string content;
     int k=0;
     content = "Min_Support=" + to_string(min_support) + " Min_conf=" + to_string(min_conf)+"%" +"\n";
