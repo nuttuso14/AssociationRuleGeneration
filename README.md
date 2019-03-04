@@ -11,6 +11,8 @@ We will proposed a basic idea for creating Association rules corressponding to A
 
 * Linux(Recommend)
   If you use linux to compile the program, type 
+  ```
   $make all
+  ```
   
 
