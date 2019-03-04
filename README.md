@@ -36,7 +36,7 @@ Type the following commands for both cases.
   ```
   $ ./main input.txt 2 60
   ```   
-## sample output
+## Sample output
   
   If the rule generation is smoothly conducted, the output terminal should be below demonstrated. 
-  
+  ![](img/terminalResult.png)
