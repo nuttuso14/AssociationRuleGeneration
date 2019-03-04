@@ -10,6 +10,7 @@ We will proposed a basic idea for creating Association rules corressponding to A
 # **How to complie the program ?**
 
 * Linux(Recommend)
-  If you use linux to compile the program, just type **make all** like the figure below.
+  If you use linux to compile the program, type 
+  $make all
   
-![alt text](https://imgur.com/15aGA01)
+
