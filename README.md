@@ -35,9 +35,8 @@ Type the following commands for both cases.
   **Note that** For both minimum support and minimum confidence, please put an integer number!. For example, If the minimum support is 2 and minimum confidence is 60%, type .. 
   ```
   $ ./main input.txt 2 60
-  ```  
-  
-  ## sample output
+  ```   
+## sample output
   
   If the rule generation is smoothly conducted, the output terminal should be below demonstrated. 
   
