@@ -40,4 +40,9 @@ Type the following commands for both cases.
   
   If the rule generation is smoothly conducted, the output terminal should be below demonstrated. 
   
-  ![terminalResult](img/terminalResult.png)
+  <img src="img/terminalResult.PNG" width="60%">
+
+Finally, the reult on screen will be writen in the .txt output file. The title will be named as:
+  ```
+  $ .txt output file : Resut_<name of input file>.txt
+  ```   
