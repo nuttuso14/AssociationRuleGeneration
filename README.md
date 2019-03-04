@@ -39,4 +39,5 @@ Type the following commands for both cases.
 ## Sample output
   
   If the rule generation is smoothly conducted, the output terminal should be below demonstrated. 
-  ![](img/terminalResult.png)
+  
+  ![terminalResult](img/terminalResult.png)
